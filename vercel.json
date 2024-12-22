@@ -1,31 +1,15 @@
 {
     "version": 2,
     "builds": [
-      {
-        "src": "app.js",
-        "use": "@vercel/node"
-      },
-      {
-        "src": "routes/**/*.js",
-        "use": "@vercel/node"
-      },
-      {
-        "src": "app_api/**/*.js",
-        "use": "@vercel/node"
-      }
+        {
+            "src": "./index.js",
+            "use": "@vercel/node"
+        }
     ],
     "routes": [
-      {
-        "src": "/api/(.*)",
-        "dest": "/app_api/$1"
-      },
-      {
-        "src": "/(.*)",
-        "dest": "/app.js"
-      }
-    ],
-    "env": {
-      "MONGO_URI": "mongodb+srv://ylmzsyn70:5WoXIxEk8aFBg4MN@cluster0.s7obz.mongodb.net/mekanbul?retryWrites=true&w=majority&appName=Cluster0"
-    }
-  }
-  
+        {
+            "src": "/(.*)",
+            "dest": "/"
+        }
+    ]
+}
