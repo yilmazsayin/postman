@@ -18,6 +18,10 @@
       {
         "src": "/api/(.*)",
         "dest": "/app_api/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/app.js"
       }
     ],
     "env": {
